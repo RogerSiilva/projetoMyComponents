@@ -1,0 +1,276 @@
+:root {
+    --primary-color: #ff7833;
+    --secundary-color: #31333b;
+    --secundary-color-ligth: #444856;
+    --secundary-color-dark: #23252d;
+
+    --default-gap: 3rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    color: #e7e7e7;
+    background-color: #ccc;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-height: 100vh; /*min-heigth = para ter no minino 100% da viewport, caso contrario(tenha mais conteudo além da viewport), expanda para cobrir o conteúdo */
+    line-height: 1.7;
+    background-image: url(../imagens/thumbs/bg-unsplash.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+h1 {        
+    font-size: 4rem;
+    color: #9fa0b9;
+    margin-top: 2rem;
+    margin-bottom: var(--default-gap);
+}
+
+h2,h3,h4, h5, h6 {
+    color: var(--primary-color);
+}
+
+article {
+    padding: 1em 0;
+}
+
+section {
+    margin-bottom: var(--default-gap);
+}
+
+address p a{
+    margin-left: 30px;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+address p a:hover {
+    color: var(--primary-color);
+}
+
+.hightlight {
+    border-left: 1px solid var(--primary-color);
+    font: 1.1em;
+    padding:  0 0 0 2em;
+    margin-bottom: 2.2em;
+}
+
+.main-header {
+    flex: 0 0 26rem;
+    background-color: rgba(49, 51, 59,.8);
+}
+
+.main {
+    background-color: rgba(68, 72, 86, .6);
+    flex: 1 0;
+    padding: 6.5rem 6rem 7.5rem;
+}
+
+.main,
+.main-header {
+    font-size: 1.6rem;
+}
+
+.perfil-img {
+    max-width: 10rem;
+
+}
+
+.main-nav {
+    text-align: right;
+    padding: 6.5rem 2.4rem 2.4rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+a {
+    color: inherit;
+}
+
+.main-nav ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+.main-nav ul a {
+    text-decoration: none;
+    display: block;
+    padding: 1.2rem 0;
+    transition: padding-rigth .2s, background-color .4s;
+    background-color: transparent;
+}
+
+.main-nav ul a:hover {
+    background-color: var(--secundary-color-ligth);
+    padding-right: 1rem;
+}
+
+.main-nav li {
+    border-bottom: 1px solid #7b7b7b;
+    padding: .4rem 0;
+}
+
+.card {
+    max-width: 740px;
+    background-color: var(--secundary-color);
+    padding: 0;
+}
+
+.card_content {
+    padding: .5em 1em 1em;
+}
+
+.card_content p,
+.card_title {
+    margin: 0;
+}
+
+.card_title {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.row {
+    display: flex;
+    gap: var(--default-gap);
+    padding-top:  1.5rem;
+    justify-content: space-between;
+}
+
+.row .row {
+    padding-top: 0;
+}
+
+.row > *{
+    flex: 1 0 0%;
+}
+
+.alternate {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* border-bottom com exceção do ultimo filho */
+.alternate li:not(:last-child) {
+    border-bottom: 2px solid;
+}
+
+.roman {
+    list-style-type:upper-roman;
+}
+
+.list-emoji {
+    list-style-type: "\f602";
+}
+
+input,
+label,
+textarea,
+select {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+}
+
+input,
+textarea,
+select {
+    background-color: #ccc;
+    padding: 1.2rem;
+    border-radius: 5px;
+    margin-bottom: 1.6rem;
+    border: 0;
+}
+
+.btn {
+    background-color: var(--secundary-color);
+    color: white;
+    border: 2px solid var(--secundary-color-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .8em 1.2em;
+    border-radius: 5px;
+}
+
+.btn + .btn {
+    margin-left: 2rem;
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--secundary-color-dark);
+}
+
+.form-quiz {
+    width: calc(50% - (var(--default-gap)/2));
+}
+
+.btn-stroke {
+    background-color: transparent;
+}
+
+.btn-big {
+    font-size: 1.6rem;
+}
+
+.btn-full {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-full + .btn-full{
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td:last-child,
+.table th:last-child {
+    text-align: right;
+}
+
+.table td,
+.table th {
+    padding: 1.6rem;
+}
+
+.table:not(.table-alternate) td,
+.table:not(.table-alternate) th {
+    border-bottom:1px solid var(--secundary-color);
+}
+
+.table th {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table-alternate tbody tr:nth-child(odd) {
+    background-color: var(--secundary-color-dark);
+}
+
+.table-verticalLines td:not(:last-child),
+.table-verticalLines th:not(:last-child) {
+    border-right:1px solid var(--secundary-color-dark);
+}
